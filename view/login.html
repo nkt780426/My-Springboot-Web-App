@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bike Stores</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>BIKE STORES</h1>
+      <hr />
+      <form action="" method="post">
+        <div class="pos">
+          <div>
+            <input type="radio" id="staff" name="pos" value="Staff" checked />
+            <label for="staff">Staff</label>
+          </div>
+
+          <div>
+            <input type="radio" id="admin" name="pos" value="admin" />
+            <label for="admin">Admin</label>
+          </div>
+        </div>
+
+        <div class="account">
+          <label for="user">Username</label>
+          <input type="text" id="user" name="user" required />
+          <label for="pass">Password</label>
+          <input type="password" id="pass" name="pass" required />
+        </div>
+
+        <input type="submit" value="Sign In" class="btn" />
+        <div class="link_register">
+          Not a member? <a href="./register.html">register here</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
