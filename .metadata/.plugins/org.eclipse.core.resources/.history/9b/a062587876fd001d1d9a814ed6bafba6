@@ -1,0 +1,9 @@
+package com.vietcombank.training.respository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.vietcombank.training.model.Employee;
+
+public interface EmployeeRespository extends JpaRepository<Employee, Long> {
+
+}

@@ -1,0 +1,21 @@
+package com.vietcombank.training.aop.log;
+
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppPointCuts {
+
+	@Pointcut("within(@org.springframework.stereotype.Repository *)" +
+	        " || within(@org.springframework.stereotype.Service *)" +
+	        " || within(@org.springframework.web.bind.annotation.RestController *)")
+	public void springBeanPointCut() {
+		
+	}
+	
+	@Around("springBeanPointCut()")
+	public void name() {
+		
+	}
+}

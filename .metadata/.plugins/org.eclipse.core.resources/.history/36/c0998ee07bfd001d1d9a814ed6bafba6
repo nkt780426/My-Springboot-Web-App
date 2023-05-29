@@ -1,0 +1,10 @@
+package com.vietcombank.training.service;
+
+import java.util.ArrayList;
+
+import com.vietcombank.training.model.Employee;
+
+public interface EmployeeService {
+	Employee saveEmployee(Employee employee);
+	ArrayList<Employee> getAllEmployee();
+}

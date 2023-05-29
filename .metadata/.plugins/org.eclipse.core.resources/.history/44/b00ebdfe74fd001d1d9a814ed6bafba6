@@ -1,0 +1,13 @@
+server.port = 8050
+
+spring.h2.console.enabled=true
+#Sua duong dan path mac dinh /h2-console
+spring.h2.console.path=/h2
+
+spring.datasource.url=jdbc:mysql://blogapi-db:3306/blogapi?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=root
+spring.datasource.password=root
+
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect

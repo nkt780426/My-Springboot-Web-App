@@ -1,0 +1,20 @@
+server.port = 8050
+
+spring.datasource.url=jdbc:mysql://localhost:3306/training?allowPublicKeyRetrieval=true&useSSL=false
+spring.datasource.username=root
+spring.datasource.password=123456
+
+spring.jpa.hibernate.ddl-auto=update
+
+#Khai bao root logger va appender file
+log4j.rootLogger = DEBUG, FILE
+
+#in thong tin ra file
+log4j.appender.FILE = org.apache.log4j.DailyRollingFileAppender
+log4j.appender.FILE.Append = true
+log4j.appender.FILE.DatePattern = '.'yyy-MM-dd
+
+#log file path
+log4j.appender.FILE.file = D:/myapp.log
+log4j.appender.FILE.layout = org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.ConversionPattern = [%d] %t %c %L %-5p  -%m%n

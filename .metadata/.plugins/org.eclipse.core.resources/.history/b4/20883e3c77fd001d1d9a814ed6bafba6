@@ -1,0 +1,5 @@
+package com.vietcombank.training.exception;
+
+public class ResourceNotFoundException {
+
+}

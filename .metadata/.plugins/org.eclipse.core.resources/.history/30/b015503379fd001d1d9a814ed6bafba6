@@ -1,0 +1,27 @@
+package com.vietcombank.training.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.vietcombank.training.model.Employee;
+import com.vietcombank.training.respository.EmployeeRespository;
+import com.vietcombank.training.service.EmployeeService;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+
+	private EmployeeRespository employeeRespository;
+
+	@Autowired
+	public EmployeeServiceImpl(EmployeeRespository employeeRespository) {
+		super();
+		this.employeeRespository = employeeRespository;
+	}
+
+	@Override
+	public Employee saveEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

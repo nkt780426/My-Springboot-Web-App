@@ -1,0 +1,5 @@
+package com.vietcombank.training.service.impl;
+
+public class EmployeeServiceImpl {
+
+}

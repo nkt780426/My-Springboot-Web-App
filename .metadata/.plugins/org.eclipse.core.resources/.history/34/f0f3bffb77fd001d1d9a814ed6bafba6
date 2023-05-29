@@ -1,0 +1,32 @@
+package com.vietcombank.training.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class ResourceNotFoundException extends RuntimeException {
+
+	private String resourceName;
+	private String fieldName;
+	private Object fielldValue;
+
+	public ResourceNotFoundException(String resourceName, String fieldName, Object fielldValue) {
+		super(String.format("%s not found with %s : %s", resourceName, fieldName, fielldValue));
+		this.resourceName = resourceName;
+		this.fieldName = fieldName;
+		this.fielldValue = fielldValue;
+	}
+
+	public String getResourceName() {
+		return resourceName;
+	}
+
+	public String getFieldName() {
+		return fieldName;
+	}
+
+	public Object getFielldValue() {
+		return fielldValue;
+	}
+
+}

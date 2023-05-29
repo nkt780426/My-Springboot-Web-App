@@ -1,0 +1,5 @@
+package com.vietcombank.training.model;
+
+public class Employee {
+
+}
