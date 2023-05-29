@@ -1,0 +1,34 @@
+package com.vietcombank.training.aop.log;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.SneakyThrows;
+
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+public class LoggerMessage {
+
+	private String className;
+	private String methodName;
+	private String methodArgs;
+	private Long elapsedTimeInMillis;
+	private Long elapsedTimeInMicros;
+	private Object result;
+
+	@SneakyThrows
+	@Override
+	public String toString() {
+		return "{" + "className='" + className + "\'" + ", methodName='" + methodName + "\'" + ", methodArgs='"
+				+ methodArgs + "\'" + ", elapsedTimeInMillis='" + elapsedTimeInMillis + "\'" + ", elapsedTimeInMicros='"
+				+ elapsedTimeInMicros + "\'" + ", result='" + new ObjectMapper().writeValueAsString(this.result) + "}";
+	}
+
+}
